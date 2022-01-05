@@ -423,20 +423,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.text-rs-font-16{
-  font-size: calc((1.6 - 1) * 1.2vw + 1rem)
-}
-
-.text-rs-font-12{
+.text-rs-font-12 {
   font-size: calc((1.2 - 1) * 1.2vw + 1rem)
 }
 
-.text-rs-font-28{
-  font-size:  calc((2.8 - 1) * 1.2vw + 1rem)
+.text-rs-font-16 {
+  font-size: calc((1.6 - 1) * 1.2vw + 1rem)
+}
+
+.text-rs-font-28 {
+  font-size: calc((2.8 - 1) * 1.2vw + 1rem)
+}
+
+*, ::before, ::after {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .relative {
   position: relative;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ml-\[2\.4vw\] {
@@ -447,6 +457,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -455,12 +477,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
+.max-h-0 {
+  max-height: 0px;
+}
+
 .min-h-\[66vh\] {
   min-height: 66vh;
 }
 
 .w-3\/4 {
   width: 75%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-2\/12 {
+  width: 16.666667%;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .flex-wrap {
@@ -479,9 +517,39 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
 .bg-brown-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(242 238 231 / var(--tw-bg-opacity));
+}
+
+.bg-black-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 31 31 / var(--tw-bg-opacity));
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-\[3vw\] {
@@ -494,12 +562,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2vw;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-\[6\.6vmax\] {
   padding-bottom: 6.6vmax;
 }
 
 .pt-\[6\.6vmax\] {
   padding-top: 6.6vmax;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-normal {
@@ -512,4 +599,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-\[1\.4rem\] {
   line-height: 1.4rem;
+}
+
+.text-brown-400 {
+  --tw-text-opacity: 1;
+  color: rgb(242 238 231 / var(--tw-text-opacity));
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
