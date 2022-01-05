@@ -1,0 +1,15 @@
+@tailwind base;
+@layer base {
+  .text-rs-font-16{
+      font-size: calc((1.6 - 1) * 1.2vw + 1rem)
+  }
+  .text-rs-font-12{
+    font-size: calc((1.2 - 1) * 1.2vw + 1rem)
+  }
+  .text-rs-font-28{
+    font-size:  calc((2.8 - 1) * 1.2vw + 1rem)
+  }
+ 
+}
+@tailwind components;
+@tailwind utilities;
