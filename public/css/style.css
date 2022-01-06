@@ -427,6 +427,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: calc((4 - 1) * 1.2vw + 1rem);
 }
 
+.text-rs-font-11 {
+  font-size: calc((1.1 - 1) * 1.2vw + 1rem)
+}
+
 .text-rs-font-12 {
   font-size: calc((1.2 - 1) * 1.2vw + 1rem);
 }
@@ -461,6 +465,19 @@ Ensure the default browser behavior of the `hidden` attribute.
         url('../fonts/NeuzeitGro-Reg.ttf') format('truetype');
 
   font-weight: 400;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neuzeit-grotesk';
+
+  src: 
+        url('../fonts/NeuzeitGro-Bol.woff2') format('woff2'),
+        url('../fonts/NeuzeitGro-Bol.woff') format('woff'),
+        url('../fonts/NeuzeitGro-Bol.ttf') format('truetype');
+
+  font-weight: 700;
 
   font-style: normal;
 }
@@ -772,8 +789,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 600;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .leading-\[1\.4rem\] {
   line-height: 1.4rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
+}
+
+.leading-\[1\.6em\] {
+  line-height: 1.6em;
 }
 
 .text-gray-500 {
@@ -784,6 +813,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-brown-400 {
   --tw-text-opacity: 1;
   color: rgb(242 238 231 / var(--tw-text-opacity));
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.underline-offset-\[\.2em\] {
+  text-underline-offset: .2em;
+}
+
+.underline-offset-\[0\.2em\] {
+  text-underline-offset: 0.2em;
 }
 
 .opacity-0 {
@@ -836,10 +878,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
-  .md\:hidden {
-    display: none;
-  }
-
   .md\:w-2\/12 {
     width: 16.666667%;
   }
@@ -854,15 +892,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:justify-between {
     justify-content: space-between;
-  }
-}
-
-@media (max-width: 475px) {
-  .xs\:hidden {
-    display: none;
-  }
-
-  .xs\:justify-center {
-    justify-content: center;
   }
 }

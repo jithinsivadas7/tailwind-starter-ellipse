@@ -4,6 +4,9 @@
     .text-rs-font-04{
         font-size: calc((4 - 1) * 1.2vw + 1rem);
     }
+    .text-rs-font-11 {
+        font-size: calc((1.1 - 1) * 1.2vw + 1rem)
+    }
     .text-rs-font-12 {
         font-size: calc((1.2 - 1) * 1.2vw + 1rem);
     }
@@ -15,6 +18,24 @@
     }
 }
 
+@font-face {
+    font-family: 'neuzeit-grotesk';
+    src: 
+        url('../fonts/NeuzeitGro-Reg.woff2') format('woff2'),
+        url('../fonts/NeuzeitGro-Reg.woff') format('woff'),
+        url('../fonts/NeuzeitGro-Reg.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'neuzeit-grotesk';
+    src: 
+        url('../fonts/NeuzeitGro-Bol.woff2') format('woff2'),
+        url('../fonts/NeuzeitGro-Bol.woff') format('woff'),
+        url('../fonts/NeuzeitGro-Bol.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
 @tailwind components;
 @tailwind utilities;
 @tailwind screens;
