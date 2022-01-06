@@ -6,8 +6,8 @@
   "scripts": {
     "vite-server": "vite",
     "server" : "live-server  --port=8080",
-    "dev": "npm run server & npx tailwindcss -i css/style.css -o public/css/style.css --verbose --watch",
-    "production":"npx tailwindcss -o public/css/style.css --minify"
+    "dev": "npm run server & npx tailwindcss -i src/css/style.css -o css/style.css --verbose --watch",
+    "production":"npx tailwindcss -i src/css/style.css -o css/style.css --minify"
   },
   "repository": {
     "type": "git",

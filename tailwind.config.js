@@ -23,8 +23,15 @@ module.exports = {
         'black-gray': '#1f1f1f',
       },
       screens: {
-        'xs': {'max': '475px'},
-      ...defaultTheme.screens,
+        'xs': {'min': '320px', 'max' : '639px'},
+        'sm': '640px',
+        'md': '768px',
+  
+        'lg': '1024px',
+  
+        'xl': '1280px',
+  
+        '2xl': '1536px',
       },
     },
 
