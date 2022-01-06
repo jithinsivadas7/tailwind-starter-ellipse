@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [...defaultTheme.fontFamily.sans],
+        sans: ['neuzeit-grotesk'],
       },
       colors: {
         brown: {
@@ -23,8 +23,8 @@ module.exports = {
         'black-gray': '#1f1f1f',
       },
       screens: {
-        'xs': '320px',
-        ...defaultTheme.screens,
+        'xs': {'max': '475px'},
+      ...defaultTheme.screens,
       },
     },
 
