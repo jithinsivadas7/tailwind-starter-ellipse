@@ -10,6 +10,9 @@
     .text-rs-font-12 {
         font-size: calc((1.2 - 1) * 1.2vw + 1rem);
     }
+    .text-rs-font-15 {
+        font-size: calc((1.5 - 1) * 1.2vw + 1rem)
+    }
     .text-rs-font-16 {
         font-size: calc((1.6 - 1) * 1.2vw + 1rem);
     }

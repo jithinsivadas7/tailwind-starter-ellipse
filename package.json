@@ -7,7 +7,7 @@
     "vite-server": "vite",
     "server" : "live-server  --port=8080",
     "dev": "npm run server & npx tailwindcss -i src/css/style.css -o css/style.css --verbose --watch",
-    "production":"npx tailwindcss -i src/css/style.css -o css/style.css --minify"
+    "prod":"npx tailwindcss -i src/css/style.css -o css/style.css --minify"
   },
   "repository": {
     "type": "git",
