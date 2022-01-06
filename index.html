@@ -12,203 +12,256 @@
 </head>
 
 <body class="bg-brown-400">
-    <header class=" relative px-[3vw] py-[2vw] flex justify-between bg-brown-400 "
+    <!-- fixed left-0 right-0 -->
+    <header x-data="{ open: false }"
+        class=" px-[3vw] py-[2vw] flex md:justify-between xs:justify-center bg-brown-400  sticky top-0"
         style="box-shadow:0px 0px 30px 0px rgba(0,0,0,.15)">
+            <button class="text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
+                <span class="sr-only">Open main menu</span>
+                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                    <span aria-hidden="true"
+                        class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out rotate-45"
+                        :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                    <!-- <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out opacity-0" :class="{'opacity-0': open } "></span> -->
+                    <span aria-hidden="true"
+                        class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out -rotate-45"
+                        :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                </div>
+            </button>
+        </div>
+
         <div>
             <a class="font-normal leading-[1.4rem] text-rs-font-16" id="site-title" href="/">Sources 3</a>
         </div>
-        <nav class="flex flex-wrap">
+
+
+        <nav class="md:flex md:flex-wrap xs:hidden">
+
+            <a class="text-rs-font-12 ml-[2.4vw]" href="https://discord.com">Discord</a>
             <a class="text-rs-font-12 ml-[2.4vw]" href="https://discord.com">Discord</a>
         </nav>
 
+
+
     </header>
     <main>
-        <article>
+        <article class="pt-[88px]">
+            <!-- Article header -->
             <section class="  bg-black-gray ">
-                <div class="text-center">
-                    <div class="mb-4">
-                    <h1 class="text-brown-400 text-rs-font-04 mb-8">Sources</h1>
+                <div class="pt-[3.3vmax] pb-[3.3vmax] pr-[3vw] pl-[3vw]">
+                    <div class="text-center">
+                        <div class="mb-4">
+                            <h1 class="text-brown-400 text-rs-font-04 mb-8">Sources</h1>
 
-                    <h4 class="text-brown-400 text-rs-font-12 "> A collection of 999 generated artworks by Mason Dahl<a
-                            href="https://masondahl.com"><span>Mason
-                                Dahl</span></a></h4>
+                            <h4 class="text-brown-400 text-rs-font-12 "> A collection of 999 generated artworks by Mason
+                                Dahl<a href="https://masondahl.com"><span>Mason
+                                        Dahl</span></a></h4>
+                        </div>
+                        <a class="bg-brown-400 py-[1.2em] px-[2.004em] inline-block my-4">
+                            COMING SOON
+                        </a>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="md:w-2/12 p-4 sm:w-full">
+                            <img
+                                src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
+                        </div>
+                        <div class="md:w-2/12 p-4 sm:w-full"">
+                        <img
+                            src="
+                            https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
+                    </div>
+                    <div class="md:w-2/12 p-4 sm:w-full"">
+                        <img
+                            src="
+                        https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
+                </div>
+                <div class="md:w-2/12 p-4 sm:w-full"">
+                        <img
+                            src="
+                    https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
+                </div>
+                <div class="md:w-2/12 p-4 sm:w-full"">
+                        <img
+                            src="
+                    https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
+                </div>
+                <div class="md:w-2/12 p-4 sm:w-full"">
+                        <img
+                            src="
+                    https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
+                </div>
+
+
+                </div>
+                <div class="py-4 text-center">
+                    <p class="text-brown-400">Art is randomly generated through many processes working together. Each
+                        piece is unique out of the billions of possible combinations.</p>
+                </div>
+                </div>
+
+            </section>
+            <!-- About section -->
+            <section class="flex items-center min-h-[66vh]">
+                <div class="flex justify-center pb-[6.6vmax] pt-[6.6vmax] px-[6vw]  ">
+                    <div class="md:w-3/4">
+                        <div class="md:w-2/4 m-auto">
+                            <h2 class="text-rs-font-28 font-semibold mb-8">About</h2>
+                            <div class="text-rs-font-12">
+                                <p class="mb-4">Sources is an abstract take on the concept of happy accidents. A world
+                                    of
+                                    chaos in which
+                                    somehow
+                                    the
+                                    stars
+                                    align. Training the viewer to have an exploratory vision of the world and how they
+                                    see
+                                    space.
+                                </p>
+                                <p>Sources is inspired by the twentieth century art movements, Cubism and Abstract Art.
+                                    Taking
+                                    in
+                                    various
+                                    forms,
+                                    and reimagining them through color, grid structure, angles, scale, and weight. Get
+                                    lost
+                                    as
+                                    each
+                                    piece
+                                    straddles the line between perfection and chaos. The Sources collection is stored
+                                    100%
+                                    on
+                                    the
+                                    Ethereum
+                                    blockchain.</p>
                             </div>
-                    <a class="bg-brown-400 px-4 py-4 inline-block">
-                        COMING SOON
-                    </a>
-                </div>
-                <div class="flex flex-wrap">
-                    <div class="w-2/12 p-4">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
-                    </div>
-                    <div class="w-2/12 p-4">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
-                    </div>
-                    <div class="w-2/12 p-4">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
-                    </div>
-                    <div class="w-2/12 p-4">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
-                    </div>
-                    <div class="w-2/12 p-4">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
-                    </div>
-                    <div class="w-2/12 p-4">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/0ee871d0-cff9-4342-bd46-53c9fb533b70/Frame+23.png" />
-                    </div>
-
-
-                </div>
-            </section>
-
-            <section class="flex items-center min-h-[66vh]">
-                <div class="flex justify-center pb-[6.6vmax] pt-[6.6vmax]">
-                    <div class="w-3/4">
-                        <h2 class="text-rs-font-28 font-semibold mb-8">About</h2>
-                        <div class="text-rs-font-12">
-                            <p class="mb-4">Sources is an abstract take on the concept of happy accidents. A world of
-                                chaos in which
-                                somehow
-                                the
-                                stars
-                                align. Training the viewer to have an exploratory vision of the world and how they see
-                                space.
-                            </p>
-                            <p>Sources is inspired by the twentieth century art movements, Cubism and Abstract Art.
-                                Taking
-                                in
-                                various
-                                forms,
-                                and reimagining them through color, grid structure, angles, scale, and weight. Get lost
-                                as
-                                each
-                                piece
-                                straddles the line between perfection and chaos. The Sources collection is stored 100%
-                                on
-                                the
-                                Ethereum
-                                blockchain.</p>
                         </div>
                     </div>
                 </div>
 
 
             </section>
+            <!-- Artist section -->
             <section class="flex items-center min-h-[66vh] bg-black-gray ">
-                <div class="flex justify-center pb-[6.6vmax] pt-[6.6vmax]">
-                    <div class="w-3/4">
-                        <h2 class="text-rs-font-28 font-semibold mb-8 text-brown-400">The Artist</h2>
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/ae3331a6-86d1-41c7-83b5-c43f99d16159/DSC05612-2+%281%29.jpeg" />
-                        <div class="text-brown-400 text-rs-font-12">
-                            <p class="mb-4"><a href="https://www.masondahl.com/">Mason Dahl</a> is a multidisciplinary
-                                designer and
-                                photographer based in Los Angeles. He has a bachelor’s degree in Graphic Design and is
-                                passionate
-                                about creating generative art, and the endless possibilities that we can achieve through
-                                technology.</p>
-                            <p>Sources is Mason’s first NFT project and he feels grateful to be a new member
-                                of the community.</p>
+                <div class="flex justify-center pb-[6.6vmax] pt-[6.6vmax] px-[6vw]  ">
+                    <div class="md:w-3/4">
+                        <div class="md:w-2/4 m-auto">
+                            <h2 class="text-rs-font-28 font-semibold mb-8 text-brown-400">The Artist</h2>
+                            <div class="">
+                                <img
+                                    src="https://images.squarespace-cdn.com/content/v1/61b2dced516375488460ba52/ae3331a6-86d1-41c7-83b5-c43f99d16159/DSC05612-2+%281%29.jpeg" />
+                            </div>
+                            <div class="text-brown-400 text-rs-font-12 py-4">
+
+                                <p class="mb-4"><a href="https://www.masondahl.com/">Mason Dahl</a> is a
+                                    multidisciplinary
+                                    designer and
+                                    photographer based in Los Angeles. He has a bachelor’s degree in Graphic Design and
+                                    is
+                                    passionate
+                                    about creating generative art, and the endless possibilities that we can achieve
+                                    through
+                                    technology.</p>
+                                <p>Sources is Mason’s first NFT project and he feels grateful to be a new member
+                                    of the community.</p>
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
 
             </section>
+            <!-- Faq section -->
+            <section class="min-h-[66vh]">
+                <div class="flex justify-center pb-[6.6vmax] pt-[6.6vmax] px-[6vw]  ">
+                    <div class="md:w-3/4">
+                        <div class="md:w-2/4 m-auto">
+                            <h2 class="text-rs-font-28 font-semibold mb-8">FAQ</h2>
+                            <div class=" max-w-xl mx-auto border-t border-gray-500" x-data="{selected:0}">
+                                <ul class="shadow-box text-rs-font-12">
 
-            <section class="flex items-center min-h-[66vh]">
-                <div class="flex justify-center pb-[6.6vmax] pt-[6.6vmax]">
-                    <div class="w-3/4">
-                        <h2 class="text-rs-font-28 font-semibold mb-8">FAQ</h2>
-                        <div class=" max-w-xl mx-auto border-t border-gray-500" x-data="{selected:0}">
-                            <ul class="shadow-box text-rs-font-12">
+                                    <li class="relative border-b border-gray-500">
 
-                                <li class="relative border-b border-gray-500">
+                                        <button type="button" class="w-full px-8 py-6 text-left"
+                                            @click="selected !== 1 ? selected = 1 : selected = null">
+                                            <div class="flex items-center justify-between">
+                                                <span>
+                                                    How much is the mint?</span>
+                                                <span class="ico-plus text-3xl">+</span>
+                                            </div>
+                                        </button>
 
-                                    <button type="button" class="w-full px-8 py-6 text-left"
-                                        @click="selected !== 1 ? selected = 1 : selected = null">
-                                        <div class="flex items-center justify-between">
-                                            <span>
-                                                How much is the mint?</span>
-                                            <span class="ico-plus text-3xl">+</span>
+                                        <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                            style="" x-ref="container1"
+                                            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                            <div class="p-6">
+                                                <p>Mint price for pre-sale and public sale will be 0.08 ETH</p>
+
+                                            </div>
                                         </div>
-                                    </button>
 
-                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
-                                        x-ref="container1"
-                                        x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
-                                        <div class="p-6">
-                                            <p>Mint price for pre-sale and public sale will be 0.08 ETH</p>
+                                    </li>
 
+
+                                    <li class="relative border-b border-gray-500">
+
+                                        <button type="button" class="w-full px-8 py-6 text-left"
+                                            @click="selected !== 2 ? selected = 2 : selected = null">
+                                            <div class="flex items-center justify-between">
+                                                <span>
+
+                                                    When can I mint?
+
+                                                </span>
+                                                <span class="ico-plus text-3xl">+</span>
+                                            </div>
+                                        </button>
+
+                                        <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                            style="" x-ref="container2"
+                                            x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+                                            <div class="p-6">
+                                                <p>You will be able to mint in early January. We will launch an exact
+                                                    date
+                                                    soon.
+
+                                                </p>
+
+                                            </div>
                                         </div>
-                                    </div>
 
-                                </li>
+                                    </li>
+
+                                    <li class="relative border-b border-gray-500">
+
+                                        <button type="button" class="w-full px-8 py-6 text-left"
+                                            @click="selected !== 3 ? selected = 3 : selected = null">
+                                            <div class="flex items-center justify-between">
+                                                <span>
+
+                                                    What wallets can I use?
+                                                </span>
+                                                <span class="ico-plus text-3xl">+</span>
+                                            </div>
+                                        </button>
+
+                                        <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                            style="" x-ref="container3"
+                                            x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                                            <div class="p-6">
+                                                <p>MetaMask</p>
 
 
-                                <li class="relative border-b border-gray-500">
-
-                                    <button type="button" class="w-full px-8 py-6 text-left"
-                                        @click="selected !== 2 ? selected = 2 : selected = null">
-                                        <div class="flex items-center justify-between">
-                                            <span>
-
-                                                When can I mint?
-
-                                            </span>
-                                            <span class="ico-plus text-3xl">+</span>
+                                            </div>
                                         </div>
-                                    </button>
 
-                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
-                                        x-ref="container2"
-                                        x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
-                                        <div class="p-6">
-                                            <p>You will be able to mint in early January. We will launch an exact date
-                                                soon.
+                                    </li>
 
-                                            </p>
-
-                                        </div>
-                                    </div>
-
-                                </li>
-
-                                <li class="relative border-b border-gray-500">
-
-                                    <button type="button" class="w-full px-8 py-6 text-left"
-                                        @click="selected !== 3 ? selected = 3 : selected = null">
-                                        <div class="flex items-center justify-between">
-                                            <span>
-
-                                                What wallets can I use?
-                                            </span>
-                                            <span class="ico-plus text-3xl">+</span>
-                                        </div>
-                                    </button>
-
-                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
-                                        x-ref="container3"
-                                        x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
-                                        <div class="p-6">
-                                            <p>MetaMask</p>
-
-
-                                        </div>
-                                    </div>
-
-                                </li>
-
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-
                 </div>
 
             </section>

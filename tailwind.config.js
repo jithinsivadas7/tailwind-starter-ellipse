@@ -22,6 +22,10 @@ module.exports = {
         },
         'black-gray': '#1f1f1f',
       },
+      screens: {
+        'xs': '320px',
+        ...defaultTheme.screens,
+      },
     },
 
   },

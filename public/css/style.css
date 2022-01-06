@@ -440,12 +440,74 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 *, ::before, ::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mx-auto {
@@ -457,16 +519,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 2.4vw;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.block {
+  display: block;
 }
 
 .inline-block {
@@ -481,6 +543,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-0\.5 {
+  height: 0.125rem;
+}
+
+.h-0 {
+  height: 0px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -489,12 +563,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 66vh;
 }
 
-.w-2\/12 {
-  width: 16.666667%;
+.w-10 {
+  width: 2.5rem;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-full {
@@ -503,6 +581,50 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: var(--tw-transform);
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: var(--tw-transform);
+}
+
+.-translate-y-1\.5 {
+  --tw-translate-y: -0.375rem;
+  transform: var(--tw-transform);
+}
+
+.-translate-y-1 {
+  --tw-translate-y: -0.25rem;
+  transform: var(--tw-transform);
+}
+
+.translate-y-1\.5 {
+  --tw-translate-y: 0.375rem;
+  transform: var(--tw-transform);
+}
+
+.translate-y-1 {
+  --tw-translate-y: 0.25rem;
+  transform: var(--tw-transform);
+}
+
+.rotate-45 {
+  --tw-rotate: 45deg;
+  transform: var(--tw-transform);
+}
+
+.-rotate-45 {
+  --tw-rotate: -45deg;
+  transform: var(--tw-transform);
+}
+
+.transform {
+  transform: var(--tw-transform);
 }
 
 .flex-wrap {
@@ -543,6 +665,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(242 238 231 / var(--tw-bg-opacity));
 }
 
+.bg-current {
+  background-color: currentColor;
+}
+
 .bg-black-gray {
   --tw-bg-opacity: 1;
   background-color: rgb(31 31 31 / var(--tw-bg-opacity));
@@ -566,14 +692,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2vw;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-\[1\.2em\] {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+
+.px-\[2\.004em\] {
+  padding-left: 2.004em;
+  padding-right: 2.004em;
 }
 
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-\[6vw\] {
+  padding-left: 6vw;
+  padding-right: 6vw;
 }
 
 .px-8 {
@@ -586,16 +722,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.5rem;
 }
 
+.pt-\[88px\] {
+  padding-top: 88px;
+}
+
+.pt-\[3\.3vmax\] {
+  padding-top: 3.3vmax;
+}
+
+.pb-\[3\.3vmax\] {
+  padding-bottom: 3.3vmax;
+}
+
+.pr-\[3vw\] {
+  padding-right: 3vw;
+}
+
+.pl-\[3vw\] {
+  padding-left: 3vw;
+}
+
 .pb-\[6\.6vmax\] {
   padding-bottom: 6.6vmax;
 }
 
 .pt-\[6\.6vmax\] {
   padding-top: 6.6vmax;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -623,9 +775,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.4rem;
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .text-brown-400 {
   --tw-text-opacity: 1;
   color: rgb(242 238 231 / var(--tw-text-opacity));
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .transition-all {
@@ -634,6 +803,69 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .duration-700 {
   transition-duration: 700ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-2\/4 {
+    width: 50%;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 320px) {
+  .xs\:hidden {
+    display: none;
+  }
+
+  .xs\:justify-center {
+    justify-content: center;
+  }
 }
